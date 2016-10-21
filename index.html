@@ -63,7 +63,7 @@
         groundMesh.position.y = -10;
         groundMesh.position.z = 0;
 
-        var sphere = new THREE.SphereGeometry(30, 15, 15);
+        var sphere = new THREE.SphereGeometry(15, 15, 15);
 
         var sphereMat = new THREE.MeshPhongMaterial({
         	map: THREE.ImageUtils.loadTexture("Fichiers/textures/general/darker_wood.jpg"), 
@@ -91,6 +91,8 @@
         	});
 
         	mesh = new THREE.MorphAnimMesh(geometry, mat);
+
+        	mesh.scale.set(0.5, 0.5, 0.5);
 
         	mesh.parseAnimations();
 
@@ -120,7 +122,7 @@
 
 	        mesh.position.x = sphereMesh.position.x;
 
-	       	mesh.position.y = sphereMesh.position.y - 5;
+	       	mesh.position.y = sphereMesh.position.y;
 
 	       	mesh.position.z = sphereMesh.position.z;
         }
